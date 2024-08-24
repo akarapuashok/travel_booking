@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking List</title>
+</head>
+<body>
+    <h1>Your Bookings</h1>
+    <ul>
+        {% for booking in bookings %}
+            <li>{{ booking.destination }} from {{ booking.travel_date }} to {{ booking.return_date }}</li>
+        {% empty %}
+            <li>No bookings found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
